@@ -3,18 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba GitHub Pages</title>
+    <title>Mi Proyecto - GitHub Pages</title>
     <style>
+        /* 1. PALETA DE COLORES Y FUENTES */
+        :root {
+            --fondo-oscuro: #24292e; /* Gris oscuro para el encabezado */
+            --color-acento: #2ea44f; /* Verde para botones y títulos */
+            --fondo-pagina: #f6f8fa; /* Gris muy claro para el fondo */
+            --texto-principal: #24292e;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--fondo-pagina);
+            color: var(--texto-principal);
+            line-height: 1.6;
+        }
+
+        /* 2. ENCABEZADO (Header) */
+        header {
+            background-color: var(--fondo-oscuro);
+            color: white;
+            padding: 60px 20px;
             text-align: center;
-            margin-top: 50px;
-            color: #333;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            color: #8b949e;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* 3. CONTENEDOR PRINCIPAL */
+        .contenedor {
+            max-width: 800px;
+            margin: -30px auto 40px auto; /* El -30px hace que las tarjetas suban un poco sobre el fondo oscuro */
+            padding: 0 20px;
+        }
+
+        /* 4. TARJETAS DE CONTENIDO (Cards) */
+        .tarjeta {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid #e1e4e8;
+        }
+
+        .tarjeta h2 {
+            color: var(--color-acento);
+            margin-top: 0;
+            border-bottom: 2px solid #e1e4e8;
+            padding-bottom: 10px;
+        }
+
+        /* 5. SECCIÓN DE IMÁGENES */
+        .galeria {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap; /* Permite que las imágenes bajen a la siguiente línea en pantallas pequeñas */
+            margin-top: 20px;
+        }
+
+        .galeria img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+            transition: transform 0.3s; /* Efecto suave de movimiento */
+        }
+
+        /* Efecto al pasar el mouse por encima de la imagen */
+        .galeria img:hover {
+            transform: scale(1.05); 
+        }
+
+        /* 6. BOTÓN */
+        .boton {
+            display: inline-block;
+            background-color: var(--color-acento);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background-color 0.2s;
+        }
+
+        .boton:hover {
+            background-color: #2c974b;
+        }
+
+        /* 7. PIE DE PÁGINA (Footer) */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #586069;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-    <h1>¡Hola, mundo!</h1>
-    <p>Esta es una prueba de creación de páginas web usando GitHub Pages.</p>
+
+    <!-- Encabezado de la página -->
+    <header>
+        <h1>¡Hola, mundo!</h1>
+        <p>Mi primera prueba real usando GitHub Pages</p>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="contenedor">
+        
+        <!-- Primera sección de texto -->
+        <div class="tarjeta">
+            <h2>Sobre este proyecto</h2>
+            <p>Esta es una prueba de creación de páginas web usando GitHub Pages. Ahora hemos añadido un diseño con <strong>CSS</strong>, lo que nos permite separar el contenido en tarjetas blancas sobre un fondo gris, haciéndolo mucho más agradable a la vista.</p>
+            <p>Aquí puedes agregar tantos párrafos como quieras para contar una historia, explicar un tutorial o presentar tu portafolio.</p>
+            <a href="https://github.com/alvgari/pruebapages" class="boton" target="_blank">Ver repositorio</a>
+        </div>
+
+        <!-- Segunda sección: Imágenes -->
+        <div class="tarjeta">
+            <h2>Galería de Imágenes</h2>
+            <p>Así es como puedes insertar imágenes en tu página. Al pasar el mouse sobre ellas, verás un pequeño efecto de animación.</p>
+            
+            <div class="galeria">
+                <!-- Tu imagen local -->
+                <img src="image_40def6.png" alt="Captura de pantalla de GitHub" width="400">
+                
+                <!-- Una imagen de ejemplo traída desde internet -->
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Código en pantalla" width="400">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Creado con HTML y CSS puro. Alojado en GitHub.</p>
+    </footer>
+
 </body>
 </html>
